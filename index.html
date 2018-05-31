@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/App.css">
     <title>VML teste</title>
 </head>
 <body ng-controller="gitHubController">
     
     <main class="container">
-        <div class="repository-content" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
-            <h1>{{repo.name}}</h1>
-            <p>{{repo.stargazers_count}}</p>
-            <p>{{repo.forks_count}}</p>
+        <div class="container-coluna">
+            <div class="coluna esquerda">
+                <a href="#!allrepositories" ng-click="orderByName('')" class="repository-content">Todos os repositórios</a>
+                <a href="#!{{repo.name}}" ng-click="orderByName(repo.name)" class="repository-content" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
+                    {{repo.name}}
+                </a>
+            </div>
+            <div class="coluna direita">
+
+                <div ng-view></div>
+        
+            </div>
         </div>
 
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.10/angular-route.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/App.js"></script>
+    <script src="js/Controllers.js"></script>
 </body>
 </html>

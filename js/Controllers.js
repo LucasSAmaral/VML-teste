@@ -1,6 +1,7 @@
 angular.module('vml')
 .controller('gitHubController', function($scope, $http){
 
+
     $http.get("https://api.github.com/users/globocom")
         .then(function(response){
             var data = response.data;
@@ -18,6 +19,5 @@ angular.module('vml')
 
         $scope.orderByName = function(n) {
             $scope.orderName = n;
-            console.log(n);
         }
 });

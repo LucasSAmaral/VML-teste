@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="vml" >
+<html lang="en" ng-app="vml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,21 @@
     <link rel="stylesheet" href="css/App.css">
     <title>VML teste</title>
 </head>
+
 <body ng-controller="gitHubController">
-    
+
     <main class="container">
         <div class="container-coluna">
             <div class="coluna esquerda">
-                <a href="#!" ng-click="orderByName('')" class="repository-content">Todos os repositórios</a>
-                <a href="#!{{repo.name}}" ng-click="orderByName(repo.name)" class="repository-content" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
+                <a href="#!" ng-click="orderByName('')" class="repository-link">Todos os repositórios</a>
+                <a href="#!{{repo.name}}" ng-click="orderByName(repo.name)" class="repository-link" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
                     {{repo.name}}
                 </a>
             </div>
             <div class="coluna direita">
 
                 <div ng-view></div>
-        
+
             </div>
         </div>
 
@@ -32,4 +34,5 @@
     <script src="js/App.js"></script>
     <script src="js/Controllers.js"></script>
 </body>
+
 </html>

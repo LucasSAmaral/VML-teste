@@ -1,7 +1,11 @@
-<div ng-repeat="repo in repos | orderBy: '-stargazers_count' | filter: orderName : true">
+<div class="container-repositories" ng-repeat="repo in repos | orderBy: '-stargazers_count' | filter: orderName : true">
 
-        <p>{{repo.name}}</p>
-        <p>{{repo.stargazers_count}}</p>
-        <p>{{repo.forks_count}}</p>
-    
-    </div>
+        <div class="container-repository">
+                <p class="repository-title">{{repo.name}}</p>
+                <div class="repository-info">
+                        <p class="star-count">Estrelas: <span>{{repo.stargazers_count}}</span></p>
+                        <p class="forks-count">Forks: <span>{{repo.forks_count}}</span></p>
+                </div>
+        </div>
+
+</div>

@@ -7,9 +7,10 @@
                         <p class="forks-count">Forks: <span>{{repo.forks_count}}</span></p>
                 </div>
                 <div class="container-commits">
-                        <div class="commits-info" ng-repeat="commit in commits">
-                                <p class="commit-sha">Sha: {{commit.sha}}</p>
-                                <p class="commit-message">Message: {{commit.commit.message}}</p>
+                        <div class="commit-info">
+                                
+                                <p class="commit-orientation">Clique no nome <strong>{{repo.name}}</strong> no lado esquerdo para ver mais informações sobre este projeto.</p>
+                                
                         </div>
                 </div>
         </div>

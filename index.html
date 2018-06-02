@@ -15,7 +15,7 @@
         <div class="container-coluna">
             <div class="coluna esquerda">
                 <a href="#!" ng-click="orderByName('')" class="repository-link">Todos os repositórios</a>
-                <a href="#!{{repo.name}}" ng-click="orderByName(repo.name)" class="repository-link" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
+                <a href="#!{{repo.name}}" ng-click="orderByName(repo.name); carregaCommits(repo.name)" class="repository-link" ng-repeat="repo in repos | orderBy: '-stargazers_count'">
                     {{repo.name}}
                 </a>
             </div>

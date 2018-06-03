@@ -16,7 +16,7 @@ angular.module('vml')
                 })
         }
 
-        $scope.orderByName = function(n) {
-            $scope.orderName = n;
+        $scope.orderByName = function(name) {
+            $scope.orderName = name;
         }
 });

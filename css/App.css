@@ -36,9 +36,9 @@ body {
     padding-bottom: 10px; }
 
 .coluna {
-  width: 100%;
+  width: 46%;
   display: block;
-  float: left;
+  float: right;
   padding: 30px;
   text-align: center; }
   .coluna .repository-link {
@@ -53,7 +53,10 @@ body {
   .coluna.direita {
     background-color: #ffffff; }
   .coluna.esquerda {
-    background-color: #00adef; }
+    background-color: #00adef;
+    position: fixed;
+    overflow-y: scroll;
+    height: 91%; }
 
 .commit-info {
   font-family: "Open sans", sans-serif; }

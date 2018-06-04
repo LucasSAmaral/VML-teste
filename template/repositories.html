@@ -5,13 +5,16 @@
                 <div class="repository-info">
                         <p class="star-count">Estrelas: <span>{{repo.stargazers_count}}</span></p>
                         <p class="forks-count">Forks: <span>{{repo.forks_count}}</span></p>
+                        <p class="commit-length">Total de commits: <span>{{commitLength}}</span></p>
                 </div>
-                <div class="container-commits with-border" ng-repeat="commit in commits">
+                <div class="container-commits with-border" ng-repeat="commit in commits" ng-if="$index <= indexNumber">
                         <div class="commit-info">
                                 <p class="commit-sha">Sha: {{commit.sha}}</p>
                                 <p class="commit-message">Message: {{commit.commit.message}}</p>
                         </div>
                 </div>
+
+                <a href="javascript:;" class="btn-load-commits" ng-click="mostrarCommits()">Carregar commits</a>
         </div>
 
 </div>

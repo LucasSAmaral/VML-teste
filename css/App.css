@@ -57,5 +57,27 @@ body {
 
 .commit-info {
   font-family: "Open sans", sans-serif; }
+.commit-orientation {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px; }
+.commit-message {
+  width: 500px;
+  margin: 0 auto; }
+
+.btn-load-commits {
+  background-color: #00adef;
+  color: #ffffff;
+  font-family: "Open sans", sans-serif;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.4s;
+  border-radius: 3px; }
+  .btn-load-commits:hover {
+    background-color: darkcyan; }
 
 /*# sourceMappingURL=App.css.map */

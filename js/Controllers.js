@@ -14,11 +14,7 @@ angular.module('vml')
                     var commitData = response.data;
                     $scope.commits = commitData;
                     $scope.commitLength = $scope.commits.length;
-
-                    if($scope.commitLength < 20) {
-                        $('.btn-load-commits').hide();
-                    }
-                })
+                });
         }
 
         $scope.orderByName = function(name) {

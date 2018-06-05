@@ -51,7 +51,8 @@ body {
     text-transform: capitalize;
     text-decoration: none; }
   .coluna.direita {
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    min-height: 706px; }
   .coluna.esquerda {
     background-color: #00adef;
     position: fixed;

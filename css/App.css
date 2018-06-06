@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background-color: #00adef; }
+  height: 100%; }
 
 .container {
   margin: 0;
@@ -31,6 +30,9 @@ body {
     font-family: "Open sans", sans-serif; }
     .container-repository .repository-info p span {
       font-weight: 700; }
+    .container-repository .repository-info p.empty-repo-warning {
+      display: block;
+      margin-top: 10px; }
   .container-commits.with-border {
     border-bottom: 1px solid #d4d4d4;
     margin-bottom: 25px;
@@ -38,6 +40,7 @@ body {
 
 .coluna {
   width: 100%;
+  min-height: 1000px;
   display: block;
   float: left;
   padding: 30px;

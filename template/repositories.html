@@ -5,16 +5,17 @@
                 <div class="repository-info">
                         <p class="star-count">Estrelas: <span>{{repo.stargazers_count}}</span></p>
                         <p class="forks-count">Forks: <span>{{repo.forks_count}}</span></p>
-                        <p class="commit-length">Total de commits: <span>{{commitLength}}</span></p>
+                        <p ng-hide="repo.name == 'cloudmon'" class="commit-length">Total de commits: <span>{{commitLength}}</span></p>
+                        <p class="empty-repo-warning" ng-show="repo.name == 'cloudmon'">Este repositório está vazio.</p>
                 </div>
-                <div class="container-commits with-border" ng-repeat="commit in commits" ng-if="$index <= indexNumber">
+                <div ng-hide="repo.name == 'cloudmon'" class="container-commits with-border" ng-repeat="commit in commits" ng-if="$index <= indexNumber">
                         <div class="commit-info">
                                 <p class="commit-sha">Sha: {{commit.sha}}</p>
                                 <p class="commit-message">Message: {{commit.commit.message}}</p>
                         </div>
                 </div>
 
-                <a href="javascript:;" class="btn-load-commits" ng-click="mostrarCommits()" ng-hide="commitLength < 20">Carregar commits</a>
+                <a href="javascript:;" ng-hide="repo.name == 'cloudmon'" class="btn-load-commits" ng-click="mostrarCommits()" ng-hide="commitLength < 20">Carregar commits</a>
         </div>
 
 </div>
